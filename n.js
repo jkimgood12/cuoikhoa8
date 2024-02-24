@@ -10,7 +10,7 @@ function login() {
 
   if (user) {
     alert("Login successful!");
-    window.location.href = "http://127.0.0.1:5500/"; // Redirect to example.com
+    window.location.href = "/jjj.html";
     // Perform redirection or other actions
   } else {
     alert("Invalid credentials. Please try again.");

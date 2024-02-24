@@ -1,56 +1,94 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Interactive Quiz</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Login Website</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f8f8;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 4px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      color: #555;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 94%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      background-color: #ff4081;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    button:hover {
+      background-color: #f50057;
+    }
+  </style>
 </head>
 <body>
-  <h1>Interactive Quiz</h1>
+  <div class="container">
+    <h1>Login</h1>
 
-<center>
-  <div class="question">
-    <div class="question-text">Question 1: What is the capital of France?</div>
-    <div class="options">
-      <label><input type="radio" name="q1" value="A"> Paris</label>
-      <label><input type="radio" name="q1" value="B"> London</label>
-      <label><input type="radio" name="q1" value="C"> Rome</label>
+    <label for="username">Username</label>
+    <input type="text" id="username" placeholder="Enter your username" required>
+
+    <label for="password">Password</label>
+    <input type="password" id="password" placeholder="Enter your password" required>
+
+    <button onclick="login()">Log In</button>
+
+    <button onclick="showSignupForm()">Sign Up</button>
+
+    <div id="signup-form" style="display: none;">
+      <h1>Sign Up</h1>
+
+      <label for="signup-username">Username</label>
+      <input type="text" id="signup-username" placeholder="Enter your username" required>
+
+      <label for="signup-password">Password</label>
+      <input type="password" id="signup-password" placeholder="Enter your password" required>
+
+      <button onclick="signup()">Sign Up</button>
     </div>
   </div>
 
-  <div class="question">
-    <div class="question-text">Question 2: Which planet is known as the Red Planet?</div>
-    <div class="options">
-      <label><input type="radio" name="q2" value="A"> Venus</label>
-      <label><input type="radio" name="q2" value="B"> Mars</label>
-      <label><input type="radio" name="q2" value="C"> Jupiter</label>
-    </div>
-  </div>
 
-  <div class="question">
-    <div class="question-text">Question 3: What is the largest ocean in the world?</div>
-    <div class="options">
-      <label><input type="radio" name="q3" value="A"> Atlantic Ocean</label>
-      <label><input type="radio" name="q3" value="B"> Indian Ocean</label>
-      <label><input type="radio" name="q3" value="C"> Pacific Ocean</label>
-    </div>
-  </div>
+    <script src="n.js"></script>
 
-  <div class="question">
-    <div class="question-text">Question 4: Who painted the Mona Lisa?</div>
-    <div class="options">
-      <label><input type="radio" name="q4" value="A"> Leonardo da Vinci</label>
-      <label><input type="radio" name="q4" value="B"> Vincent van Gogh</label>
-      <label><input type="radio" name="q4" value="C"> Pablo Picasso</label>
-    </div>
-  </div>
-
-  <div style="text-align: center;">
-    <button onclick="submitQuiz()">Submit Quiz</button>
-  </div>
-</center>
-
-
-  <div class="result" id="result"></div>
-  <script src="script.js"></script>
 </body>
 </html>
