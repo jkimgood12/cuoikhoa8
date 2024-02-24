@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quiz Result</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f8f8;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      max-width: 400px;
+      padding: 40px;
+      background-color: #fff;
+      border-radius: 4px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    h1 {
+      color: #ff4081;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+
+    .score {
+      font-size: 48px;
+      font-weight: bold;
+      color: #ff4081;
+      margin-bottom: 30px;
+    }
+
+    .message {
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+
+    .restart-button {
+      background-color: #ff4081;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .restart-button:hover {
+      background-color: #f50057;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Quiz Result</h1>
+
+    <div class="score"></div>
+
+    <div class="message"></div>
+
+    <button class="restart-button">Restart Quiz</button>
+  </div>
+
+  <script>
+    // Retrieve the score from the query parameter
+    var urlParams = new URLSearchParams(window.location.search);
+    var score = urlParams.get("score");
+
+    // Display the score on the page
+    var scoreElement = document.querySelector(".score");
+    scoreElement.textContent = score;
+
+    // Display a message based on the score
+    var messageElement = document.querySelector(".message");
+    if (score >= 3) {
+      messageElement.textContent = "Congratulations! You did great!";
+    } else {
+      messageElement.textContent = "Oops! Better luck next time!";
+    }
+
+    // Restart the quiz when the button is clicked
+    var restartButton = document.querySelector(".restart-button");
+    restartButton.addEventListener("click", function() {
+      window.location.href = "index.html";
+    });
+  </script>
+</body>
+</html>
