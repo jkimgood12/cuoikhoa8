@@ -15,5 +15,5 @@ function submitQuiz() {
   }
 
   // Redirect to the result page with the score as a query parameter
-  window.location.href = "result.html?score=" + score;
+  window.location.href = "cuoikhoa8/result?score=" + score;
 }
