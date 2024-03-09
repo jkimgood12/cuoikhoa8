@@ -10,7 +10,7 @@ function login() {
 
   if (user) {
     alert("Login successful!");
-    window.location.href = "/jjj.html";
+    window.location.href = "/quiz.html";
     // Perform redirection or other actions
   } else {
     alert("Invalid credentials. Please try again.");

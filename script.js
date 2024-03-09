@@ -1,6 +1,6 @@
 function submitQuiz() {
-  var answers = ["A", "B", "C", "A"]; // Correct answers
-  var totalQuestions = 4;
+  var answers = ["A", "B", "C", "A","B","C","C","A","C","B"]; // Correct answers
+  var totalQuestions = 10;
   var score = 0;
 
   for (var i = 1; i <= totalQuestions; i++) {
