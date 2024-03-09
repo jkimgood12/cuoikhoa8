@@ -14,6 +14,15 @@ function submitQuiz() {
     }
   }
 
+  // write score to data.json {"score": score}
+  
+  // open file data.json
+  var fs = require("fs");
+  fs.writeFile("data.json", JSON.stringify(data), function (err) {
+    if (err) throw err;
+    console.log("Saved!");
+  });
+
   // Redirect to the result page with the score as a query parameter
-  window.location.href = "cuoikhoa8/result?score=" + score;
+  window.location.href = "cuoikhoa8/result";
 }
