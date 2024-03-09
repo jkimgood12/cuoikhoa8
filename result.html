@@ -73,21 +73,10 @@
   </div>
 
   <script>
-    // open data.json (content: {"score" : 0}) on this folder and get the score
-    var dataUrl = "/cuoikhoa8/data.json";
-    var score = 0;
-    fetch(dataUrl)
-      .then(function(response) {
-        return response.json();
-      })
-      .then(function(data) {
-        score = data.score;
-      });
-
-      
     
+    // get socre from local storage
+    var score = localStorage.getItem("score");
 
-    // Display the score on the page
     var scoreElement = document.querySelector(".score");
     scoreElement.textContent = score;
 
